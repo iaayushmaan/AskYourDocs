@@ -15,7 +15,7 @@ function Chatbot() {
     setInputValue("");
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:8000/api/query", {
+      const response = await axios.post("http://localhost:8000/api/v1/query", {
         question: inputValue,
       });
       const answer = response.data.answer;
